@@ -1,0 +1,110 @@
+
+.container {
+  fill: none;
+  pointer-events: all;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.link {
+  stroke: #ccc;
+  marker-end: url(#godparent);
+}
+
+.node {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+  /*
+  -webkit-transition:opacity 0.1s linear;
+     -moz-transition:opacity 0.1s linear;
+          transition:opacity 0.1s linear;*/
+}
+
+.text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  stroke-width: 1.5px;
+  stroke-opacity: .8;
+}
+
+
+.node.selected {
+  stroke: #000;
+}
+.node.godchild  {
+  fill: #52FF54;
+}
+.node.godparent {
+  fill: #624AFF;
+}
+.node.godparent.godchild {
+  fill: #1CD0FC;
+}
+.text.selected {
+  font-size: 15px;
+}
+.link.selected {
+  stroke: #000;
+  marker-end: url(#godparent);
+}
+
+.node.faded {
+  opacity: 0.1;
+}
+.text.faded {
+  opacity: 0.1;
+}
+.link.faded {
+  opacity: 0.1;
+  marker-end: none;
+}
+
+
+
+#search,
+#controls {
+    width: 300px;
+    border: black solid 1px;
+    padding: 20px;
+    position: fixed;
+    right: 20px;
+}
+
+#controls table {
+    width: 100%;
+}
+
+#controls td {
+    width: 50%;
+}
+
+#controls tr td:nth-child(1) {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#controls tr td:nth-child(2) {
+    text-align: left;
+}
+
+#controls {
+    bottom: 20px;
+}
+
+
+#search {
+    top: 20px;
+}
+
+#search input{
+    width: 100%;
+    border-radius: 6px;
+    border-color: black;
+    border-width: 1px;
+    padding: 5px;
+    font-size: 15px;
+}
